@@ -1,5 +1,5 @@
 # react-native-date-range-picker
-Implementing a custom date range picker with the react-native-calendars package
+Implementing a custom date range picker with the [react-native-calendars](https://github.com/wix/react-native-calendars) package
 
 ## How to run this project?
 
