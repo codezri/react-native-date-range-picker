@@ -22,7 +22,11 @@ function CustomCalendar(props) {
     for(let cur = start; cur <= end; cur += 60 * 60 * 24000) {
       let curStr = new Date(cur).toISOString().substr(0, 10);
       marked[curStr] = {
-        selected: true
+        selected: true,
+        color: '#aabbee',
+        textColor: 'black',
+        startingDay: cur == start,
+        endingDay: cur == end,
       };
     }
     return marked;
@@ -48,6 +52,7 @@ function CustomCalendar(props) {
     <Calendar
       initialDate={initDate}
       markedDates={marked}
+      markingType="period"
       onDayPress={handleDayPress}
       {...props}
     />
